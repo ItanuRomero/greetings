@@ -16,5 +16,17 @@ func main() {
         log.Fatal(error)
     }
     
-    fmt.Println(message)
+    fmt.Println(message, "\n")
+
+    names := []string{"Gladys", "Itanú", "Romero"}
+
+    messages, err := greetings.Hellos(names)
+
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    for index, message := range messages {
+        fmt.Println(index, message)
+    }
 }
